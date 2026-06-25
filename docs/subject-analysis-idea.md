@@ -82,6 +82,12 @@ author:
    institutionalised it). This is the spine that lets us separate **lineage**
    (how an idea spread) from **support** (whether evidence backs it).
 
+6. **Inference (the leap)** — the edge from a study's observations to its
+   conclusion. First-class and *checkable*: it carries the assumptions it relies
+   on, the alternative explanations (confounds) it failed to rule out, and a
+   logical form that may be invalid. This is where most errors enter, so it gets
+   its own object instead of hiding inside "study."
+
 ## The two questions the framework must answer
 
 Everything above exists to serve two queries the user named:
@@ -174,6 +180,57 @@ falls. This single node shows the whole framework in miniature: a mechanistic
 foundation, sufficiency by determination (not statistics), and a taint cascade
 into every study that assumed the opposite.
 
+## Studies split: observation vs interpretation
+
+A study is not one thing. It is **two layers that must be stored separately**:
+
+- **Observation (experimental fact)** — what was actually measured. Durable,
+  reusable; its *kind* is whatever the method was. ("Serum triglycerides track
+  with cardiovascular problems." "In test, dietary carbohydrate raised serum
+  triglycerides more than dietary fat did.")
+- **Interpretation (conclusion)** — what the authors claimed it *means*. This is
+  a **Claim**, not a fact, reached from the observation by an **Inference**.
+
+Why the split is load-bearing: **the conclusion is where it usually goes wrong,
+and the observation survives the conclusion being wrong.** Rejecting a study's
+interpretation does not cost you its facts. So taint attaches mostly to the
+*interpretation* layer — a "discredited" study often has perfectly good
+observations wearing a broken conclusion. Keep the facts; re-examine the leap.
+
+This also refines provenance: **an assumption is frequently a laundered
+conclusion.** "Avoid dietary fat" did not arrive as a fact — it began as one
+study's interpretation, got promoted to a field-wide assumption, then was built
+on without anyone revisiting the leap. "Where did this idea come from?" often
+resolves to *a conclusion that quietly became an axiom.*
+
+### Catalogue of inferential failure modes
+
+The leap fails in recurring, nameable ways. Cataloguing them makes them
+**scannable** — each becomes a check the framework can run over any inference (a
+Skill, in PM-model terms). Two from the worked cases:
+
+**Mislocated cause** — a real association is pinned to the wrong input.
+- Observation: high serum triglycerides ↔ health problems. *(real)*
+- Leap → "dietary fat raises triglycerides, so avoid dietary fat." *(the error)*
+- Contradicting fact: dietary **carbs** raise serum triglycerides *more* than fat
+  (excess carbohydrate → de novo lipogenesis). The effect was real; the cause was
+  misassigned, so the advice points at the wrong lever.
+
+**Conflated entity / unseparated sources** — a harmful thing is identified with
+one of its sources while another is ignored, and the two are never separated
+experimentally.
+- Observation: saturated fat (in the body) ↔ higher health risk.
+- Leap → "avoid eating saturated animal fat."
+- But de novo lipogenesis turns excess carbs into **saturated** fat
+  endogenously. So body-saturated-fat has at least two sources — dietary and
+  carb-derived — and **no one separated which one carries the risk.** Meanwhile a
+  *direct* link between eating saturated animal fat and heart disease has been
+  hard to establish. Blame defaulted to the visible, intuitive source.
+
+These aren't one-offs — "the mess" is full of them. The catalogue grows as we map
+the hierarchy, and each entry becomes a reusable lens to run over every
+conclusion in the graph.
+
 ## How this rides on the existing meta (PM model)
 
 This maps cleanly onto the v0.1 PM model — it doesn't need a new orchestration
@@ -214,3 +271,10 @@ the PM model runs it.
    follow. The structure is the argument; it shouldn't hide a thesis.
 8. **Generalisation** — nutrition is instance #1. What's nutrition-specific vs
    reusable for any contested subject (climate, a historical debate, etc.)?
+9. **Observation/interpretation extraction** — splitting a paper's facts from its
+   conclusions is the highest-value, hardest step (papers blur them on purpose).
+   Done by hand, by an LLM pass, by the Author Engine? How do we keep the split
+   honest and auditable?
+10. **Failure-mode detection** — is the catalogue applied manually as a checklist,
+    or can a pass *scan* inferences for each pattern? Where's the line between
+    flagging a candidate and asserting an error?
