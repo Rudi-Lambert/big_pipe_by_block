@@ -227,9 +227,67 @@ experimentally.
   *direct* link between eating saturated animal fat and heart disease has been
   hard to establish. Blame defaulted to the visible, intuitive source.
 
+**Faux replication failure** — a study claims to falsify an earlier one but
+silently violates a boundary condition the original named as essential. A null
+result *outside* the original's stated domain is reported as a refutation
+*inside* it; the original gets recorded as "debunked" and that false verdict
+propagates.
+- *Vitamin C / cancer.* Original: effect occurs **only** above a blood
+  concentration reachable solely by IV (≈50 g+ intravenous). "Refutation": 10 g
+  **oral** — which cannot reach that threshold — finds no effect and concludes
+  "megadose vitamin C doesn't work." It never tested the original's claim; the
+  null is exactly what the original predicts for that dose/route.
+- *Glutamate (MSG) / brain damage.* Original: lesions are visible **only** if
+  brains are examined within a short window before they heal. "Refutation":
+  switches the feeding method (so ingested dose is uncertain) and inspects the
+  next morning, after healing — sees nothing. Again precisely the original's
+  prediction, published as a refutation.
+
+Anatomy (so it's scannable): the refutation (a) targets a claim carrying **scope
+conditions**, and (b) alters a load-bearing one — dose, route, timing,
+measurement protocol — while presenting itself as an equivalent test, often with
+**rhetorical cover** ("10 g is a megadose"). Unlike the two above, this defect
+lives not on a single study's inference but on the **refutation edge between two
+studies** (see next section).
+
 These aren't one-offs — "the mess" is full of them. The catalogue grows as we map
 the hierarchy, and each entry becomes a reusable lens to run over every
 conclusion in the graph.
+
+## Scope conditions and refutation edges
+
+The faux-replication pattern forces two more objects into the model:
+
+- **Scope conditions** — the conditions under which a claim holds: threshold,
+  route, timing window, population, measurement protocol. An effect-claim is
+  never just "X → Y"; it's "X → Y **when** [conditions]". Most faux refutations
+  win by quietly stepping outside these, so scope conditions must be captured as
+  explicitly as the claim itself.
+- **Refutation / replication edge** — "study B falsifies / replicates study A" is
+  a first-class, *checkable* relationship, not a settled fact. The check is one
+  question: **does B satisfy A's scope conditions?** If not, the refutation is
+  void, and any taint it placed on A must be **reversed** — A is reinstated.
+
+Note the inversion. Normally taint flows from a *valid* contradicting fact; here
+an *invalid* refutation creates *illegitimate* taint. So the framework must be
+able to run taint **backwards** — detect and undo a false debunking — which is
+exactly the case where the field's recorded verdict is upside down.
+
+## Following the money (an orthogonal layer)
+
+Both refutations above invite a "follow the money" reading. The framework should
+record **incentive / conflict-of-interest metadata** on studies and actors — who
+funded it, who benefits from the verdict — but keep it **strictly orthogonal to
+the evidential verdict**.
+
+The discipline: COI is a **prior on where to look, not a verdict.** A study is
+not wrong because of who paid for it — the *boundary-condition violation* is what
+voids it. The money only explains *why* a broken refutation got designed and
+published. Keeping these separate is what stops the system from collapsing into
+ad hominem (which would destroy its credibility): the structural defect carries
+the conclusion, the incentive flags the node for scrutiny. A node with **both** a
+motive and a defect is the strongest audit signal — but the defect still does the
+work.
 
 ## How this rides on the existing meta (PM model)
 
@@ -278,3 +336,11 @@ the PM model runs it.
 10. **Failure-mode detection** — is the catalogue applied manually as a checklist,
     or can a pass *scan* inferences for each pattern? Where's the line between
     flagging a candidate and asserting an error?
+11. **Scope-condition extraction** — boundary conditions are stated in the
+    original paper but easy to miss; pulling them out reliably is the crux of
+    detecting faux refutations.
+12. **Reverse taint** — mechanics of reinstating a wrongly-"debunked" claim, and
+    how to display "the field believes this is refuted, but the refutation is
+    void."
+13. **Incentive without ad hominem** — surface COI as an audit prior while
+    guaranteeing it never becomes the evidential verdict.
