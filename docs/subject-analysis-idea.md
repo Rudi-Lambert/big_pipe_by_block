@@ -133,9 +133,15 @@ universal currency.
 
 | Kind | Example | What makes it sufficient | What it can do |
 | :-- | :-- | :-- | :-- |
-| **Mechanistic / structural** | enzyme present/absent, a metabolic pathway | one rigorous determination; replication is *nice*, not *required* | **establish or refute** by mechanism |
+| **Mechanistic — human** | enzyme present/absent in humans, a human pathway | one rigorous **human** determination; replication *nice*, not *required* | **establish or refute** by mechanism |
+| **Mechanistic — animal / model** | germ-free-mouse transplant, cell-line assay | one rigorous determination *in that model* | **propose** a mechanism; only *suggestive* for humans — needs human confirmation, **never human-dispositive alone** |
 | **Interventional (RCT)** | controlled dietary trial | adequate design + power; ideally replicated | support causal claims |
 | **Epidemiological (enquête)** | observational / correlational survey | **many** repetitions; preferably **meta-analysis** | at best *suggest*; weak alone |
+
+The mechanistic split is not cosmetic: a germ-free-mouse result (Branch L in the
+nutrition map) is a *real* determination but a *different currency* from a human
+one, with a different sufficiency rule. Treating the two as interchangeable is
+itself a catalogued defect (*animal-vs-human mechanism conflation*, below).
 
 The trap the framework exists to prevent: treating a mechanistic fact as "just
 one study" (so demanding statistical replication it doesn't need), or treating a
@@ -207,7 +213,8 @@ resolves to *a conclusion that quietly became an axiom.*
 
 The leap fails in recurring, nameable ways. Cataloguing them makes them
 **scannable** — each becomes a check the framework can run over any inference (a
-Skill, in PM-model terms). Two from the worked cases:
+Skill, in PM-model terms). Three worked in detail below; the complete promoted
+catalogue follows as a table.
 
 **Mislocated cause** — a real association is pinned to the wrong input.
 - Observation: high serum triglycerides ↔ health problems. *(real)*
@@ -250,9 +257,42 @@ measurement protocol — while presenting itself as an equivalent test, often wi
 lives not on a single study's inference but on the **refutation edge between two
 studies** (see next section).
 
-These aren't one-offs — "the mess" is full of them. The catalogue grows as we map
-the hierarchy, and each entry becomes a reusable lens to run over every
-conclusion in the graph.
+These aren't one-offs — "the mess" is full of them. The three above are written
+out in full because they're the load-bearing examples; the complete catalogue
+below was **promoted from the nutrition map** once each mode had real-content
+backing (see `nutrition-the-mess-hierarchy.md`).
+
+### The full catalogue (promoted from the nutrition map)
+
+Grouped by the structural element each attaches to — which is also *where its
+check runs*. This table is the catalogue **and** the defect-location map in one.
+
+| Mode | Attaches to | The check | Anchor example |
+| :-- | :-- | :-- | :-- |
+| Mislocated cause | Inference (one study) | is the named input the real driver, or is a bigger one unaccounted for? | carbs, not fat, drive triglycerides |
+| Conflated / unseparated sources | Inference | are the entity's multiple sources separated experimentally? | dietary vs DNL-derived saturated fat |
+| Reverse causation | Inference | is the arrow backwards — effect mistaken for cause? | already-heavy people switch to sweeteners |
+| Healthy-user confounding | Inference | do exposed and unexposed differ systematically? | meat / whole-grain / breakfast cohorts |
+| Reference-group contamination | Inference | is the comparison baseline clean? | alcohol "abstainers" incl. sick-quitters |
+| Surrogate-vs-outcome substitution | Inference | does moving the marker equal helping the patient? | LDL/BP down, mortality unchanged |
+| Reductionist isolation | Inference | does a whole-food association transfer to the isolated component? | β-carotene pill harms; carotenoid food doesn't |
+| Faux replication failure | Refutation edge (two studies) | does the refuter satisfy the original's scope conditions? | vitamin C oral vs IV; MSG timing window |
+| Overgeneralised scope | Scope conditions (on a claim) | is a subgroup effect extended to everyone? | salt for all; protein "harms kidneys" |
+| Ill-defined construct | Construct / exposure definition | is the exposure variable crisply defined? | "ultra-processed" (NOVA) as one exposure |
+| Laundered conclusion | Provenance edge | is this "assumption" a fact, or a promoted conclusion? | "avoid dietary fat" |
+| Phantom origin | Provenance edge | does the provenance trace reach a real supporting source? | "8 glasses of water a day" |
+| Foundational contradiction | Rests-on / dependency edge | does a mechanistic fact contradict a premise below the claim? | DNL vs "the harmful fat is dietary" |
+| Iatrogenic cascade | Dependency graph (between branches) | did a defect drive a real-world substitution whose harm surfaces elsewhere? | anti-butter advice → margarine → trans-fat harm |
+| Assumption-coloring | Body-of-evidence interpretation (a Position) | is a contested body read through a pre-held frame? | obesity data via energy-balance vs CIM |
+| Animal-vs-human mechanism conflation | Evidence-kind (on an observation) | is an animal determination treated as human-dispositive? | germ-free-mouse microbiome → humans |
+
+Two structural facts fall out of this table, and both feed the schema:
+- The **"attaches to" column is the complete list of node/edge/attribute types**
+  the data model must represent (consolidated in the next section).
+- Modes are **not all the same kind of check** — some scan a single inference,
+  some a two-study edge, some the whole dependency graph, some a *definition*.
+  The failure-mode scan is therefore a **suite keyed by target type**, not one
+  pass.
 
 ## Scope conditions and refutation edges
 
@@ -289,36 +329,42 @@ the conclusion, the incentive flags the node for scrutiny. A node with **both** 
 motive and a defect is the strongest audit signal — but the defect still does the
 work.
 
-## Where defects attach (the location map)
+## Where defects attach → the structural inventory
 
-The catalogue entries don't all attack the same object. Each defect lives on a
-specific structural element, and *that element is where its check runs*. Listing
-them this way makes two things fall out: the **object/edge types the data model
-needs**, and the fact that the failure-mode scan is **not one pass** but a set of
-checks keyed to object type.
+The catalogue table above doubles as the location map: its "attaches to" column is
+the complete set of structural elements the schema must represent. Consolidated:
 
-| Failure mode | Attaches to | The check | If it fails |
-| :-- | :-- | :-- | :-- |
-| Mislocated cause | **Inference** (one study) | is the named input the real driver, or is a bigger one unaccounted for? | conclusion redirected / weakened |
-| Conflated / unseparated sources | **Inference** (one study) | are the entity's multiple sources separated experimentally? | conclusion unsupported until separated |
-| Laundered conclusion | **Provenance edge** | is this "assumption" a fact, or a promoted conclusion? | demote assumption → contestable claim |
-| Faux replication failure | **Refutation edge** (two studies) | does the refuting study satisfy the original's scope conditions? | refutation void → reverse taint, reinstate original |
-| Foundational contradiction | **Rests-on / dependency edge** | does a mechanistic fact contradict an assumed premise below this claim? | taint cascade up the hierarchy |
-
-Read the middle column bottom-up and you get the **structural inventory** the
-schema has to represent:
-
-- **Nodes** — Claim / Assumption · Observation (fact) · Conclusion (claim) · Actor
+- **Nodes** — Claim · Assumption · Observation (fact) · Conclusion (claim) ·
+  Actor · **Construct / exposure definition** (new — for *ill-defined construct*)
 - **Edges** — Inference (obs → conclusion) · Rests-on (claim → claim) ·
-  Refutation/replication (study → study) · Provenance (idea → origin)
+  Refutation/replication (study → study) · Provenance (idea → origin) ·
+  **Substitution / iatrogenic (branch → branch)** (new — for *iatrogenic cascade*)
 - **Attributes / overlays** — Scope conditions (on effect-claims) · Evidence kind
-  + quality (on observations) · Incentive / COI (on studies & actors)
+  + quality, incl. the **human/animal mechanistic split** (on observations) ·
+  Incentive / COI (on studies & actors) · **Position = a body-of-evidence
+  interpretation** held by an Actor (where *assumption-coloring* attaches)
 
-Each catalogue entry therefore declares **one target type** it runs against. New
-patterns either match an existing target (another Inference check, say) or force
-a new structural element into the model — which is the signal that the schema
-needs to grow. That's the through-line from "collect examples" to "design the
-data model": *the catalogue is the schema's test suite.*
+Each catalogue entry declares **one target type**. New patterns either match an
+existing target (another Inference check) or force a new structural element into
+the model — the signal that the schema must grow. *The catalogue is the schema's
+test suite*, and it now covers enough targets to design against directly (next
+step: the schema).
+
+## Positive controls (a neutrality requirement, not an option)
+
+A framework that only ever finds defects is indistinguishable from a contrarian
+confirmation machine, and would be rightly distrusted. So the model must render a
+verdict of **"supported"** as confidently as **"unsupported"**, and every branch
+must be asked *"could this survive?"* — not only *"where does it break?"*
+
+**Positive controls** are claims known to survive evaluation, carried alongside
+the ones that fall. In the nutrition map, *trans fats → CHD* (evidence converges
+across mechanistic, epidemiological, and interventional kinds) is the clearest
+one. Design consequences:
+- The verdict type is symmetric: `supported | unsupported | contested | untested`,
+  not a defect-flag.
+- A run with **zero** positive-control survivals is itself a warning that the
+  process has become biased toward debunking.
 
 ## How this rides on the existing meta (PM model)
 
@@ -343,9 +389,10 @@ the PM model runs it.
 1. **Claim granularity** — what is one claim? "Saturated fat is bad" vs the
    specific, testable version. Too coarse and provenance blurs; too fine and the
    graph explodes. (The fructose node shows the same problem for *foundations*.)
-2. **The evidence-kind taxonomy** — is mechanistic / interventional /
-   epidemiological enough, or do we need finer kinds (animal vs human mechanism,
-   cohort vs case-control)? Each kind needs an explicit **sufficiency rule**.
+2. ~~**The evidence-kind taxonomy**~~ — *partly resolved:* mechanistic is now
+   split into **human vs animal** (Branch L forced it). Still open: does
+   epidemiological need splitting (cohort vs case-control vs ecological), and does
+   each finer kind get its own sufficiency rule?
 3. **Taint propagation rules** — when exactly does a contradicting fact *fully*
    invalidate a study vs merely *weaken* it? Partial taint, confidence decay, and
    stopping the cascade from over-reaching all need defining.
