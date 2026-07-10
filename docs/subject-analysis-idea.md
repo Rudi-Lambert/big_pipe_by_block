@@ -289,6 +289,37 @@ the conclusion, the incentive flags the node for scrutiny. A node with **both** 
 motive and a defect is the strongest audit signal — but the defect still does the
 work.
 
+## Where defects attach (the location map)
+
+The catalogue entries don't all attack the same object. Each defect lives on a
+specific structural element, and *that element is where its check runs*. Listing
+them this way makes two things fall out: the **object/edge types the data model
+needs**, and the fact that the failure-mode scan is **not one pass** but a set of
+checks keyed to object type.
+
+| Failure mode | Attaches to | The check | If it fails |
+| :-- | :-- | :-- | :-- |
+| Mislocated cause | **Inference** (one study) | is the named input the real driver, or is a bigger one unaccounted for? | conclusion redirected / weakened |
+| Conflated / unseparated sources | **Inference** (one study) | are the entity's multiple sources separated experimentally? | conclusion unsupported until separated |
+| Laundered conclusion | **Provenance edge** | is this "assumption" a fact, or a promoted conclusion? | demote assumption → contestable claim |
+| Faux replication failure | **Refutation edge** (two studies) | does the refuting study satisfy the original's scope conditions? | refutation void → reverse taint, reinstate original |
+| Foundational contradiction | **Rests-on / dependency edge** | does a mechanistic fact contradict an assumed premise below this claim? | taint cascade up the hierarchy |
+
+Read the middle column bottom-up and you get the **structural inventory** the
+schema has to represent:
+
+- **Nodes** — Claim / Assumption · Observation (fact) · Conclusion (claim) · Actor
+- **Edges** — Inference (obs → conclusion) · Rests-on (claim → claim) ·
+  Refutation/replication (study → study) · Provenance (idea → origin)
+- **Attributes / overlays** — Scope conditions (on effect-claims) · Evidence kind
+  + quality (on observations) · Incentive / COI (on studies & actors)
+
+Each catalogue entry therefore declares **one target type** it runs against. New
+patterns either match an existing target (another Inference check, say) or force
+a new structural element into the model — which is the signal that the schema
+needs to grow. That's the through-line from "collect examples" to "design the
+data model": *the catalogue is the schema's test suite.*
+
 ## How this rides on the existing meta (PM model)
 
 This maps cleanly onto the v0.1 PM model — it doesn't need a new orchestration
