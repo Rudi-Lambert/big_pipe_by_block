@@ -214,6 +214,95 @@ animal vs human** (open question Q2): a germ-free-mouse result is a real
 determination, but it is *not* the same currency as a human one. Its sufficiency
 rule differs, and treating the two as interchangeable is itself a defect.
 
+## Branch M — trans fats (a POSITIVE CONTROL + iatrogenic cascade)
+
+```
+T8  Trans fats cause heart disease
+ ├─rests on─ F17 mechanism: trans fat raises LDL, lowers HDL, promotes inflammation  [kind: mechanistic, human]
+ ├─rests on─ M17 consistent epidemiology                                            [kind: epidemiological]
+ └─converges with─ intervention/removal → outcomes improved                          [kind: interventional/policy]
+ [status: SURVIVES bottom-up evaluation — evidence agrees across all three kinds. This is a POSITIVE CONTROL.]
+
+Iatrogenic cascade (cross-branch):
+  T1/T2 "avoid butter / saturated fat"  ─drove─▶  recommend margarine (partially hydrogenated)  ─caused─▶  T8 harm
+  [a defect in one branch produced a real-world substitution whose harm is mapped in another]
+```
+
+Branch M matters twice over: it's the map's clearest **positive control** (a claim
+that *should* stand), and it introduces the **iatrogenic cascade** — the mess is
+not only wrong beliefs but wrong beliefs that *drove substitutions* with their own
+consequences. The anti-saturated-fat advice actively pushed trans fats.
+
+## Branch N — omega-3 (isolate-and-supplement + a questioned origin)
+
+```
+Claim  fish-oil / omega-3 supplements prevent CHD
+ └─origin─ F18 "Greenland Inuit have low CVD" (Bang & Dyerberg, 1970s)
+            [defect? laundered conclusion / weak-origin — the founding epidemiology was later questioned
+                     (Inuit CVD rates may not have been low; poorly documented) yet propagated for decades]
+ └─rests on─ M18 supplement the isolated nutrient   [defect? reductionist isolation — fish vs a fish-oil pill]
+              └─contradicted by─ large supplement RCTs largely null (VITAL, ASCEND);
+                                 one high-dose EPA trial positive but placebo-confound disputed  [kind: interventional]
+```
+
+## Branch O — alcohol (reference-group contamination)
+
+```
+Claim  moderate drinking protects the heart (the J-curve)
+ └─rests on─ M19 observational: moderate drinkers outlive abstainers
+              [defect? sick-quitter / abstainer bias — the "non-drinker" reference group is contaminated with
+                       former drinkers who quit BECAUSE they were ill; this manufactures the J-curve]
+              └─tension─ Mendelian-randomisation & reanalyses suggest little/no cardioprotection  [kind: genetic/epi]
+ └─against─ F19 alcohol (acetaldehyde) is a carcinogen  [kind: mechanistic, human — well supported]
+```
+
+A specific, nameable variant of confounding: **reference-group contamination** —
+the comparison baseline is not clean. Distinct enough from generic healthy-user
+bias to track separately.
+
+## Branch P — artificial sweeteners (reverse causation)
+
+```
+Claim  artificial sweeteners cause weight gain / metabolic harm
+ └─rests on─ M20 observational: sweetener use ↔ obesity
+              [defect? REVERSE CAUSATION — already-heavier people switch TO diet products; the arrow runs backwards]
+ └─rests on─ F20 mouse microbiome → glucose intolerance   [kind: mechanistic, ANIMAL — extrapolation risk (cf. Branch L)]
+              └─human RCTs mixed
+```
+
+New signature: **reverse causation** — direction of the arrow assumed wrong.
+Related to but distinct from confounding (there a third variable; here the effect
+is mistaken for the cause).
+
+## Branch Q — ultra-processed food (an ill-defined-construct case)
+
+```
+Claim  ultra-processed food (UPF) causes overeating and disease
+ ├─support─ F21 metabolic-ward RCT: UPF diet → spontaneous overeating & weight gain  [kind: interventional — notable]
+ └─weakness─ M21 "UPF" as an exposure variable
+              [defect? ill-defined construct — NOVA bundles heterogeneous foods/mechanisms into one category;
+                       you cannot cleanly evaluate a claim whose exposure is a fuzzy bundle]
+              [also confounding in the observational arm — UPF eaters differ systematically]
+```
+
+New signature: **ill-defined construct** — the exposure itself is not crisply
+defined, so every downstream result inherits the ambiguity. This is the
+claim-granularity problem (open Q1) showing up at the level of the *exposure
+variable*, not the conclusion.
+
+## Branch R — hydration "8 glasses a day" (a phantom origin)
+
+```
+Claim  everyone should drink 8 glasses of water a day ("8×8")
+ └─trace provenance─▶  no identifiable supporting study; commonly traced to a 1945 note that
+                        also said most water comes from food — i.e. the source, read in full, does NOT support it
+ [defect? PHANTOM ORIGIN — the provenance trace hits a dead end or a misreading; an axiom with no support beneath it]
+```
+
+The minimal, purest **provenance failure**: run "where did this come from?" and the
+chain terminates in nothing (or in a misread source). The extreme case of a
+laundered conclusion — laundered from *no* conclusion at all.
+
 ## Cross-branch patterns (recurring signatures)
 
 Coverage reveals defects that repeat across branches — these are higher-order
@@ -247,10 +336,43 @@ catalogue status:
    as human-dispositive; the general form of open question Q2 about splitting the
    "mechanistic" evidence-kind.
 
+8. **Reverse causation** (sweeteners P) — the arrow assumed backwards; distinct
+   from confounding.
+9. **Reference-group contamination** (alcohol O) — the comparison baseline is
+   dirty (sick-quitters); a specific, nameable confounding variant.
+10. **Ill-defined construct** (UPF Q) — the exposure variable is a fuzzy bundle,
+    so results inherit the ambiguity; claim-granularity (Q1) at the exposure level.
+11. **Phantom origin** (hydration R) — the provenance trace terminates in nothing
+    or a misread source; the extreme of laundered conclusion.
+12. **Iatrogenic cascade** (trans fats M) — a defect in one branch drove a
+    real-world substitution whose harm surfaces in another. Not a reasoning error
+    inside a study but a *causal link between branches*, so it attaches to the
+    dependency graph itself.
+
 New catalogue candidates surfaced by enrichment: **surrogate-vs-outcome
 substitution**, **overgeneralised scope**, **assumption-coloring**, **healthy-user
 confounding**, **reductionist isolation**, **animal-vs-human mechanism
-conflation** — each earned by appearing in more than one branch.
+conflation**, **reverse causation**, **reference-group contamination**,
+**ill-defined construct**, **phantom origin**, **iatrogenic cascade** — each
+earned by appearing on real content.
+
+## Positive controls (a neutrality safeguard)
+
+A map that only ever finds defects is indistinguishable from a contrarian
+confirmation machine — and would rightly be distrusted. The framework's
+credibility depends on **claims that survive evaluation** appearing alongside the
+ones that fall. So far the map's **positive controls** are:
+
+- **Trans fats → CHD (Branch M)** — evidence converges across mechanistic,
+  epidemiological, and interventional kinds; it *should* stand.
+- **Atherosclerosis LDL-infiltration mechanism (F1)** — a foundation that, tested
+  bottom-up, is expected to hold even where claims built loosely on top of it do
+  not.
+
+Design consequence: the model must be able to render a **verdict of "supported"**
+as confidently as a verdict of "unsupported," and every branch should be asked
+"could this survive?" — not just "where does it break?" Positive controls are how
+we keep the tool honest and detect if it has become biased toward debunking.
 
 ## Foundations to test first (bottom-up queue)
 
@@ -291,14 +413,15 @@ That's the "kind before quality" rule paying off on real content.
   the output, not a verdict.
 - **Granularity is rough.** Several M-nodes will split (e.g. M1 bundles "LDL
   causes" with "total cholesterol correlates").
-- **Coverage is now broad (A–L) but still not exhaustive.** Branches cover
-  saturated fat, low-fat/high-carb, dietary cholesterol, obesity, salt,
-  red/processed meat, seed oils, fibre/whole grains, protein, meal timing/fasting,
-  micronutrient supplements, and the microbiome. Still unmapped: specific fats
-  (omega-3, trans fats), alcohol, artificial sweeteners, hydration, and the
-  ultra-processed-food debate.
-- **Six catalogue candidates** now stand ready (surrogate-vs-outcome,
-  overgeneralised scope, assumption-coloring, healthy-user confounding,
-  reductionist isolation, animal-vs-human mechanism conflation) — each has ≥2
-  independent examples, so by our own "earn it by recurrence" rule they're ready
-  to promote into `subject-analysis-idea.md`'s catalogue.
+- **Coverage is now wide (A–R).** Eighteen branches span the major fat, cholesterol,
+  obesity, salt, meat, fibre, protein, timing, supplement, microbiome, alcohol,
+  sweetener, UPF, and hydration disputes — plus a positive control (trans fats).
+  Genuinely diminishing returns now; remaining gaps (specific micronutrients,
+  glycaemic index, meal-pattern variants) are unlikely to add *new* signatures.
+- **Eleven catalogue candidates** now stand ready — the original six plus reverse
+  causation, reference-group contamination, ill-defined construct, phantom origin,
+  and iatrogenic cascade. Each has real-content backing, so by our "earn it by
+  recurrence / real example" rule they're ready to promote into
+  `subject-analysis-idea.md`'s catalogue.
+- **The map now includes positive controls**, not only defects — a deliberate
+  neutrality safeguard (see that section).
