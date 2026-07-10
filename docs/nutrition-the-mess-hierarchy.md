@@ -150,6 +150,70 @@ Here the *intervention* worked on the surrogate (LDL) but not the endpoint
 (death) — a surrogate-vs-outcome split that also stress-tests whether the model
 distinguishes "moved a marker" from "helped a patient."
 
+## Branch H — fibre / whole grains (epi-vs-RCT + bundling)
+
+```
+T7  Fibre / whole grains prevent CHD and colorectal cancer
+ └─rests on─ M12 observational: whole-grain eaters are healthier
+              [kind: epidemiological]  [defect? confounding — healthy-user bias, as in Branch F]
+ └─rests on─ M13 "it is the fibre doing the work"
+              [defect? conflated entity — "whole grain" bundles fibre + replacing refined carbs + healthy-user;
+                        the variables were never separated]
+              └─contradicted by─ RCTs for colorectal adenoma (Polyp Prevention, Wheat-Bran Fiber): null
+                                 [kind: interventional — epidemiology said yes, RCT said no]
+              └─weak support─ F13 colonic fermentation → short-chain fatty acids  [kind: mechanistic — real but modest]
+```
+
+## Branch I — protein (a scope + overgeneralisation case)
+
+```
+Claim  "High protein damages the kidneys" → limit protein
+ └─rests on─ M14 protein load raises glomerular filtration
+              [defect? overgeneralised scope — harm shown in PRE-EXISTING kidney disease, generalised to healthy people]
+              └─scope condition─ applies to established CKD, not demonstrated in healthy kidneys
+
+Cross-link  protein's satiety / thermic effect (F14, mechanistic) feeds Branch D (obesity);
+            "animal vs plant protein" overlaps Branch F.
+```
+
+## Branch J — meal timing / fasting (mechanism-vs-myth + confounding)
+
+```
+Claim-a  "Breakfast is the most important meal"
+ └─rests on─ M15 breakfast-eaters weigh less (observational)
+              [defect? confounding — breakfast-skippers differ systematically; RCTs show weak/no causal effect]
+Claim-b  "Eat frequent small meals to stoke metabolism"
+ └─contradicted by─ F15 thermic effect of food is proportional to TOTAL intake, not meal frequency  [mechanistic]
+Claim-c  "Intermittent fasting / TRE helps beyond calorie restriction"
+ └─open─ isocaloric RCTs mixed — is there a timing effect INDEPENDENT of total calories?
+          [ties directly to Branch D: energy-balance vs substrate/hormonal framing]
+```
+
+## Branch K — micronutrient supplements (the isolate-and-supplement failure)
+
+```
+Pattern  food rich in nutrient N ↔ health  ⟹  supplement isolated N  ⟹  RCT fails or HARMS
+ └─exhibit 1─ β-carotene: observational (carotenoid-rich diet ↔ less lung cancer)
+              → supplement trials (ATBC, CARET) INCREASED lung cancer in smokers   [kind: interventional — harm]
+ └─exhibit 2─ vitamin E, antioxidant supplements: null / harm in RCTs
+ [defect? reductionist isolation — a WHOLE-FOOD association attributed to one component stripped of its matrix;
+          also surrogate-vs-outcome, and a route/dose cousin of the vitamin-C faux-replication case]
+```
+
+## Branch L — microbiome (tests the animal-vs-human mechanism question)
+
+```
+Claim  gut microbiome composition causes obesity / metabolic disease
+ └─rests on─ F16 germ-free-mouse transplant transfers the phenotype  [kind: mechanistic — but ANIMAL]
+              [defect? animal-mechanism → human extrapolation — treats an animal determination as if human-dispositive]
+ └─mostly─ M16 human associations (composition ↔ disease)  [kind: epidemiological — causal direction unresolved]
+```
+
+Branch L is the map's clearest case that **"mechanistic" must split into
+animal vs human** (open question Q2): a germ-free-mouse result is a real
+determination, but it is *not* the same currency as a human one. Its sufficiency
+rule differs, and treating the two as interchangeable is itself a defect.
+
 ## Cross-branch patterns (recurring signatures)
 
 Coverage reveals defects that repeat across branches — these are higher-order
@@ -171,9 +235,22 @@ catalogue status:
    is pre-held. Not a defect *in* a study but in how the field *interprets* a
    contested body of them.
 
+5. **Healthy-user confounding** — the single most pervasive defect in the map:
+   meat (F), whole grains (H), breakfast (J) all lean on observational cohorts
+   where the exposed and unexposed differ systematically (smoking, exercise, SES).
+   It's "mislocated cause" specialised to nutritional epidemiology, and it recurs
+   so often it may deserve its own named entry.
+6. **Reductionist isolation** — a whole-food (or whole-context) association
+   attributed to one isolated component: β-carotene the pill vs carotenoids in
+   food (K), "the fibre" vs the whole grain (H). Appears twice → catalogue-ready.
+7. **Animal-vs-human mechanism conflation** — germ-free-mouse results (L) treated
+   as human-dispositive; the general form of open question Q2 about splitting the
+   "mechanistic" evidence-kind.
+
 New catalogue candidates surfaced by enrichment: **surrogate-vs-outcome
-substitution**, **overgeneralised scope**, **assumption-coloring** — each earned
-by appearing in more than one branch.
+substitution**, **overgeneralised scope**, **assumption-coloring**, **healthy-user
+confounding**, **reductionist isolation**, **animal-vs-human mechanism
+conflation** — each earned by appearing in more than one branch.
 
 ## Foundations to test first (bottom-up queue)
 
@@ -214,10 +291,14 @@ That's the "kind before quality" rule paying off on real content.
   the output, not a verdict.
 - **Granularity is rough.** Several M-nodes will split (e.g. M1 bundles "LDL
   causes" with "total cholesterol correlates").
-- **Coverage is broader but still partial.** Branches A–G now cover saturated
-  fat, low-fat/high-carb, dietary cholesterol, obesity (energy-balance vs CIM),
-  salt, red/processed meat, and seed-oil replacement. Still unmapped: fibre /
-  whole grains, protein, micronutrients, meal timing / fasting, the microbiome.
-- **New catalogue candidates** (surrogate-vs-outcome, overgeneralised scope,
-  assumption-coloring) are noted but not yet written up in
-  `subject-analysis-idea.md` — do that once each has a second independent example.
+- **Coverage is now broad (A–L) but still not exhaustive.** Branches cover
+  saturated fat, low-fat/high-carb, dietary cholesterol, obesity, salt,
+  red/processed meat, seed oils, fibre/whole grains, protein, meal timing/fasting,
+  micronutrient supplements, and the microbiome. Still unmapped: specific fats
+  (omega-3, trans fats), alcohol, artificial sweeteners, hydration, and the
+  ultra-processed-food debate.
+- **Six catalogue candidates** now stand ready (surrogate-vs-outcome,
+  overgeneralised scope, assumption-coloring, healthy-user confounding,
+  reductionist isolation, animal-vs-human mechanism conflation) — each has ≥2
+  independent examples, so by our own "earn it by recurrence" rule they're ready
+  to promote into `subject-analysis-idea.md`'s catalogue.
